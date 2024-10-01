@@ -25,28 +25,30 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+INCLUDEPATH += src
+
 SOURCES += \
-        main.cpp \
-    Music.cpp \
-    MainWidget.cpp \
-    MusicListWidget.cpp \
-    MusicList.cpp \
-    MusicListDialog.cpp \
-    LyricWidget.cpp
+        src/main.cpp \
+    src/Music.cpp \
+    src/MainWidget.cpp \
+    src/MusicListWidget.cpp \
+    src/MusicList.cpp \
+    src/MusicListDialog.cpp \
+    src/LyricWidget.cpp
 
 HEADERS += \
-    Music.h \
-    myQSS.h \
-    MainWidget.h \
-    MusicListWidget.h \
-    MusicList.h \
-    MusicListDialog.h \
-    LyricWidget.h
+    src/Music.h \
+    src/myQSS.h \
+    src/MainWidget.h \
+    src/MusicListWidget.h \
+    src/MusicList.h \
+    src/MusicListDialog.h \
+    src/LyricWidget.h
 
 FORMS += \
-    MusicListDialog.ui \
-    mainWidget.ui \
-    LyricWidget.ui
+    ui/MusicListDialog.ui \
+    ui/mainWidget.ui \
+    ui/LyricWidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -56,5 +58,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     imagefile.qrc
 
-
-RC_ICONS = LightMusicPlayer.ico
+RC_ICONS = resources/LightMusicPlayer.ico
